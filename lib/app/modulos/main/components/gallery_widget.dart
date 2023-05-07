@@ -14,7 +14,7 @@ class GalleryWidget extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 12),
         child: Row(
           children: [
-            Container(
+            SizedBox(
               height: 120,
               child: InkWell(
                 onTap: () {
