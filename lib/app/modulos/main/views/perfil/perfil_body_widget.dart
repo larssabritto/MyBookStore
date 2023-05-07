@@ -36,31 +36,34 @@ class PerfilBodyWidget extends StatelessWidget {
       formGroup: form,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              children: [
-                BannerWidget(
-                  book: bookMock,
-                ),
-                SizedBox(height: 50),
-                Text("Imagem de Perfil",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xff08182A),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  BannerWidget(
+                    book: bookMock,
+                  ),
+                  SizedBox(height: 50),
+                  Text("Imagem de Perfil",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xff08182A),
       ),
-                ),
-                SizedBox(height: 20),
-                InputTextWidget(label: "Nome da loja", formControlName: "nm_loja"),
-                SizedBox(height: 20),
-                InputTextWidget(label: "Slogan da loja", formControlName: "slogan"),
-                SizedBox(height: 20),
-                InputTextWidget(label: "Nome do usuário", formControlName: "nm_usuario"),
-              ],
-            ),
-            ButtonWidget(text: "Salvar", route: '',),
-          ],
+                  ),
+                  SizedBox(height: 20),
+                  InputTextWidget(label: "Nome da loja", formControlName: "nm_loja"),
+                  SizedBox(height: 20),
+                  InputTextWidget(label: "Slogan da loja", formControlName: "slogan"),
+                  SizedBox(height: 20),
+                  InputTextWidget(label: "Nome do usuário", formControlName: "nm_usuario"),
+                ],
+              ),
+              SizedBox(height: 30),
+              ButtonWidget(text: "Salvar", route: '',),
+            ],
+          ),
         ),
       ),
     );

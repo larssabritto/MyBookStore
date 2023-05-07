@@ -89,7 +89,7 @@ class _InputTextWidgetState<T> extends State<InputTextWidget<T>> {
             inputFormatters: widget.mask,
             obscureText: isObscure,
             decoration: InputDecoration(
-                contentPadding: widget.contentPadding??const EdgeInsets.only(left: 18),
+                contentPadding: widget.contentPadding??const EdgeInsets.only(left: 20),
                 filled: true,
                 fillColor: Colors.white,
                 hintText: widget.hintText,
@@ -138,7 +138,7 @@ class _InputTextWidgetState<T> extends State<InputTextWidget<T>> {
       icon: Icon(Icons.clear, shadows: [
         Shadow(
             color: Colors.black.withAlpha(50),
-            blurRadius: 10,
+            blurRadius: 15,
             offset: const Offset(0, 3))
       ]),
       onPressed: onPressed,
