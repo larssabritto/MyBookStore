@@ -7,14 +7,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class LivrosBodyWidget extends StatelessWidget {
   final IBookRepository _bookRepository = BookRepository();
+  String profilePhoto = "";
 
   LivrosBodyWidget({Key? key}) : super(key: key);
 
   Future<List<GetStoreBookResponseDTO>> getStoreBooks() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    profilePhoto = sharedPreferences.getString("profilePhoto") ?? "";
 
     List<GetStoreBookResponseDTO> storeBooks = await _bookRepository
         .searchStoreBooks(sharedPreferences.getInt("idStore") ?? -1);
+
     return storeBooks;
   }
 

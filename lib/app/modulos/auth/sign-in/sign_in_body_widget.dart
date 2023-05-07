@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mybookstore/app/components/input_text_widget.dart';
+import 'package:mybookstore/app/components/router_button_widget.dart';
 import 'package:reactive_forms/reactive_forms.dart';
-import '../../../components/button_widget.dart';
-import '../../../components/text_widget.dart';
 
 
 class SignInBodyWidget extends StatelessWidget {
-   SignInBodyWidget({Key? key}) : super(key: key);
+   const SignInBodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class SignInBodyWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Text("MyBookStore",
                     style:
@@ -41,7 +40,7 @@ class SignInBodyWidget extends StatelessWidget {
                       fontSize: 25,
                     )),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -54,7 +53,7 @@ class SignInBodyWidget extends StatelessWidget {
                           ValidationMessage.required: (erro) => "Campo obrigatório" ,
                       },
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     InputTextWidget(
                       isPassword: true,
                       label: "Senha",
@@ -64,17 +63,17 @@ class SignInBodyWidget extends StatelessWidget {
                         ValidationMessage.required: (erro) => "Campo obrigatório",
                       },
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  children: [
-                    ButtonWidget(text:"Entrar", route: '',),
+                  children: const [
+                    RouterButtonWidget(text:"Entrar", route: '',),
                     SizedBox(height: 10),
-                    ButtonWidget(text: "Cadastrar minha loja", route: '/auth/novaloja',)
+                    RouterButtonWidget(text: "Cadastrar minha loja", route: '/auth/novaloja',)
                   ],
                 ),
               ),

@@ -1,13 +1,14 @@
 
 import 'package:flutter/material.dart';
-import 'package:mybookstore/app/entities/book.entity.dart';
+import 'package:mybookstore/app/dtos/store/get_store/get_store_response.dto.dart';
 
 class BannerWidget extends StatelessWidget {
-  final Book book;
+  final GetStoreResponseDTO _store;
   final double bannerHeight = 200.0;
   final double avatarHeight = 90.0;
+  final String profilePhoto;
 
-  const BannerWidget({Key? key, required this.book}) : super(key: key);
+  const BannerWidget({Key? key, required GetStoreResponseDTO book, required this.profilePhoto}) : _store = book, super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +30,9 @@ class BannerWidget extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                        image: const DecorationImage(
+                        image: DecorationImage(
                             fit: BoxFit.fill,
-                            image: NetworkImage("https://images.ecycle.com.br/wp-content/uploads/2021/05/03122127/pietro-de-grandi-T7K4aEPoGGk-unsplash-1024x683.jpg.webp")),
+                            image: NetworkImage(_store.banner ?? "")),
                       ),
                     ),
                   ),
@@ -53,11 +54,11 @@ class BannerWidget extends StatelessWidget {
                   child: Container(
                     width: 90.0,
                     height: 90.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         fit: BoxFit.fill,
-                        image: NetworkImage("https://photografos.com.br/wp-content/uploads/2020/09/fotografia-para-perfil.jpg"),
+                        image: NetworkImage(profilePhoto),
                       ),
                     ),
                   ),
