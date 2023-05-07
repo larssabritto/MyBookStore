@@ -1,8 +1,5 @@
-
-
 import 'package:flutter/material.dart';
-
-import 'button_widget.dart';
+import 'package:mybookstore/app/components/router_button_widget.dart';
 
 class SearchfilterWidget extends StatelessWidget {
   const SearchfilterWidget({Key? key}) : super(key: key);
@@ -10,7 +7,7 @@ class SearchfilterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      backgroundColor: Color(0xff08182A),
+      backgroundColor: const Color(0xff08182A),
       child: IconButton(
         onPressed: () {
           showModalBottomSheet(
@@ -35,9 +32,7 @@ class SearchfilterWidget extends StatelessWidget {
                             ),
                           ),
                           IconButton(
-                            onPressed: () {
-
-                            },
+                            onPressed: () {},
                             icon: const Icon(Icons.clear),
                             color: const Color(0xff08182A),
                           ),
@@ -45,17 +40,17 @@ class SearchfilterWidget extends StatelessWidget {
                       ),
                       Row(
                         children: const [
-                          Text('Título',
-                            style: TextStyle(
-                              color: Color(0xff08182A)
-                            ),
+                          Text(
+                            'Título',
+                            style: TextStyle(color: Color(0xff08182A)),
                           ),
                           Expanded(child: TextField()),
                         ],
                       ),
                       Row(
                         children: const [
-                          Text('Autor',
+                          Text(
+                            'Autor',
                             style: TextStyle(
                               color: Color(0xff08182A),
                             ),
@@ -65,7 +60,8 @@ class SearchfilterWidget extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Text('Ano\npublicado',
+                          const Text(
+                            'Ano\npublicado',
                             style: TextStyle(
                               color: Color(0xff08182A),
                             ),
@@ -91,11 +87,26 @@ class SearchfilterWidget extends StatelessWidget {
                             Expanded(
                               child: Row(
                                 children: const [
-                                  Icon(Icons.star,color: Color(0xff08182A),),
-                                  Icon(Icons.star,color: Color(0xff08182A),),
-                                  Icon(Icons.star,color: Color(0xff08182A),),
-                                  Icon(Icons.star,color: Color(0xff08182A),),
-                                  Icon(Icons.star,color: Color(0xff08182A),),
+                                  Icon(
+                                    Icons.star,
+                                    color: Color(0xff08182A),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Color(0xff08182A),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Color(0xff08182A),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Color(0xff08182A),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Color(0xff08182A),
+                                  ),
                                 ],
                               ),
                             ),
@@ -104,20 +115,21 @@ class SearchfilterWidget extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Text('Status',
-                            style: TextStyle(
-                              color: Color(0xff08182A)
-                            ),
+                          const Text(
+                            'Status',
+                            style: TextStyle(color: Color(0xff08182A)),
                           ),
                           Switch(
-
                             value: true,
                             onChanged: (value) {},
                           ),
                           const Text('Em estoque')
                         ],
                       ),
-                      const ButtonWidget(text: "Filtrar", route: '',)
+                      const RouterButtonWidget(
+                        text: "Filtrar",
+                        route: '',
+                      )
                     ],
                   ),
                 ),
@@ -125,7 +137,9 @@ class SearchfilterWidget extends StatelessWidget {
             },
           );
         },
-        icon: const Icon(Icons.equalizer,),
+        icon: const Icon(
+          Icons.equalizer,
+        ),
       ),
     );
   }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-class ButtonWidget extends StatelessWidget {
+class RouterButtonWidget extends StatelessWidget {
   final String text;
-  final Function() onPressed;
-
-  const ButtonWidget({
+  final String route;
+  const RouterButtonWidget({
     Key? key,
     required this.text,
-    required this.onPressed,
+    required this.route,
   }) : super(key: key);
 
   @override
@@ -29,9 +29,12 @@ class ButtonWidget extends StatelessWidget {
         children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.transparent,
-                shadowColor: Colors.transparent),
-            onPressed: onPressed,
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+            ),
+            onPressed: () {
+              Modular.to.navigate(route);
+            },
             child: Text(text),
           ),
         ],
