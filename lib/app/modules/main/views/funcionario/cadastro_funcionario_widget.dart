@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mybookstore/app/components/input_text_widget.dart';
 import 'package:mybookstore/app/components/router_button_widget.dart';
-import 'package:mybookstore/app/modulos/main/views/funcionario/components/avatar_profile_widget.dart';
+import 'package:mybookstore/app/modules/funcionarios/avatar_profile_widget.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 class CadastrarFuncionarioWidget extends StatelessWidget {
