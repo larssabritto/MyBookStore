@@ -7,7 +7,7 @@ class AvatarProfileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
+        padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -31,7 +31,7 @@ class AvatarProfileWidget extends StatelessWidget {
                 CircleAvatar(
                   radius: 45,
                   backgroundImage: NetworkImage(
-                    "https://photografos.com.br/wp-content/uploads/2020/09/fotografia-para-perfil.jpg",
+                    "https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png",
                   ),
                 )
               ],

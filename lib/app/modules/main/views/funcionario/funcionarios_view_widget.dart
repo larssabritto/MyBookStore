@@ -37,7 +37,7 @@ class FuncionariosViewWidget extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xff08182A),
         onPressed: () =>
-          Modular.to.pushNamed("/funcionarios/usuario"),
+          Modular.to.pushNamed("/funcionarios/novo"),
         child: const Icon(Icons.add),
       ),
     );

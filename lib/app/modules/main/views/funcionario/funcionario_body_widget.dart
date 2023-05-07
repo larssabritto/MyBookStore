@@ -4,7 +4,7 @@ import 'package:mybookstore/app/repository/contracts/iemployee.repository.dart';
 import 'package:mybookstore/app/repository/employee.repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'components/novo_funcionario_widget.dart';
+import 'components/funcionario_list_item_widget.dart';
 
 class FuncionariosBodyWidget extends StatelessWidget {
   FuncionariosBodyWidget({Key? key}) : super(key: key);
