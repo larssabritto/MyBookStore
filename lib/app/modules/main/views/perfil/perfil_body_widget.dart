@@ -36,31 +36,34 @@ class PerfilBodyWidget extends StatelessWidget {
       formGroup: form,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              children: [
-                BannerWidget(
-                  book: bookMock,
-                ),
-                const SizedBox(height: 50),
-                const Text("Imagem de Perfil",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xff08182A),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  BannerWidget(
+                    book: bookMock,
+                  ),
+                  const SizedBox(height: 50),
+                  const Text("Imagem de Perfil",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xff08182A),
       ),
-                ),
-                const SizedBox(height: 20),
-                const InputTextWidget(label: "Nome da loja", formControlName: "nm_loja"),
-                const SizedBox(height: 20),
-                const InputTextWidget(label: "Slogan da loja", formControlName: "slogan"),
-                const SizedBox(height: 20),
-                const InputTextWidget(label: "Nome do usuário", formControlName: "nm_usuario"),
-              ],
-            ),
-            const RouterButtonWidget(text: "Salvar", route: '',),
-          ],
+                  ),
+                  const SizedBox(height: 20),
+                  const InputTextWidget(label: "Nome da loja", formControlName: "nm_loja"),
+                  const SizedBox(height: 20),
+                  const InputTextWidget(label: "Slogan da loja", formControlName: "slogan"),
+                  const SizedBox(height: 20),
+                  const InputTextWidget(label: "Nome do usuário", formControlName: "nm_usuario"),
+                ],
+              ),
+              const SizedBox(height: 30),
+              const RouterButtonWidget(text: "Salvar", route: '',),
+            ],
+          ),
         ),
       ),
     );

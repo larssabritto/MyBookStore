@@ -6,6 +6,9 @@ class SignInViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SignInBodyWidget());
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: SignInBodyWidget(),
+    );
   }
 }
