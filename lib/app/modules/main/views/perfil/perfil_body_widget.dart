@@ -92,6 +92,11 @@ class PerfilBodyWidget extends StatelessWidget {
                       text: "Salvar",
                       route: '',
                     ),
+                    const SizedBox(height: 20),
+                    const RouterButtonWidget(
+                      text: "Sair",
+                      route: '/auth',
+                    ),
                   ],
                 ),
               ),
