@@ -12,19 +12,10 @@ class CadastrarFuncionarioWidget extends StatelessWidget {
 
   FormGroup form = FormGroup({
     'nome': FormControl(validators: [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(10),
     ]),
     'usuario': FormControl(validators: [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(10),
     ]),
     'senha': FormControl(validators: [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(10),
     ]),
   });
   

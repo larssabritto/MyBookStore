@@ -16,9 +16,6 @@ class CadastrarLivrosBody extends StatelessWidget {
   Widget build(BuildContext context) {
     FormGroup form = FormGroup({
       'titulo': FormControl(validators: [
-        Validators.required,
-        Validators.minLength(5),
-        Validators.maxLength(10),
       ]),
       'autor': FormControl(validators: [
         Validators.required,

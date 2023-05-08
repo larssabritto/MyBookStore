@@ -31,10 +31,19 @@ class PerfilBodyWidget extends StatelessWidget {
 
   FormGroup form = FormGroup({
     'nm_loja': FormControl(validators: [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(10),
     ]),
     'slogan': FormControl(validators: [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(10),
     ]),
     'nm_usuario': FormControl(validators: [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(10),
     ]),
   });
 
