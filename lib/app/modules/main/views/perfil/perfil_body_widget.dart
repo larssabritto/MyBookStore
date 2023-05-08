@@ -31,19 +31,10 @@ class PerfilBodyWidget extends StatelessWidget {
 
   FormGroup form = FormGroup({
     'nm_loja': FormControl(validators: [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(10),
     ]),
     'slogan': FormControl(validators: [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(10),
     ]),
     'nm_usuario': FormControl(validators: [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(10),
     ]),
   });
 
@@ -91,6 +82,11 @@ class PerfilBodyWidget extends StatelessWidget {
                     const RouterButtonWidget(
                       text: "Salvar",
                       route: '',
+                    ),
+                    const SizedBox(height: 20),
+                    const RouterButtonWidget(
+                      text: "Sair",
+                      route: '/auth',
                     ),
                   ],
                 ),
