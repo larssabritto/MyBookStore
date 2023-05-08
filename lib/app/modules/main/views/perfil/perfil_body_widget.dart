@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:mybookstore/app/components/button_widget.dart';
 import 'package:mybookstore/app/components/input_text_widget.dart';
 import 'package:mybookstore/app/components/router_button_widget.dart';
 import 'package:mybookstore/app/dtos/store/get_store/get_store_response.dto.dart';
@@ -47,6 +49,13 @@ class PerfilBodyWidget extends StatelessWidget {
     ]),
   });
 
+  void logout() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.clear();
+
+    Modular.to.navigate("/auth/");
+  }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -93,9 +102,9 @@ class PerfilBodyWidget extends StatelessWidget {
                       route: '',
                     ),
                     const SizedBox(height: 20),
-                    const RouterButtonWidget(
+                    ButtonWidget(
                       text: "Sair",
-                      route: '/auth',
+                      onPressed: () => logout()
                     ),
                   ],
                 ),

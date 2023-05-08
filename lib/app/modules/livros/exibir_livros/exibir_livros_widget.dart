@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mybookstore/app/dtos/book/get_book/get_store_book.response.dto.dart';
 import 'package:mybookstore/app/repository/book.repository.dart';
 import 'package:mybookstore/app/repository/contracts/ibook.repository.dart';
@@ -17,6 +18,13 @@ class ExibirLivros extends StatelessWidget {
         preferences.getInt("idStore") ?? -1, int.parse(idBook ?? "-1"));
     
     return storeBook;
+  }
+
+  Future<void> deleteStoreBook() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+
+    await _bookRepository.deleteStoreBook(preferences.getInt("idStore") ?? -1, int.parse(idBook ?? "-1"));
+    Modular.to.navigate("/home/");
   }
 
   @override
@@ -108,22 +116,8 @@ class ExibirLivros extends StatelessWidget {
                   const SizedBox(
                     height: 12,
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          const Color(0xff08182A)),
-                      shape: MaterialStateProperty.all<OutlinedBorder>(
-                          const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8)),
-                      )),
-                    ),
-                    child: const Text('Editar'),
-                  ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => deleteStoreBook(),
                     style: ButtonStyle(
                       foregroundColor: MaterialStateProperty.all<Color>(
                           const Color(0xff08182A)),

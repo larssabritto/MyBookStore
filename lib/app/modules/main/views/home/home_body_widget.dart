@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:mybookstore/app/dtos/book/get_book/get_store_book.response.dto.dart';
-import 'package:mybookstore/app/modules/main/components/gallery_widget.dart';
+import 'package:mybookstore/app/modules/main/components/book_list_item.dart';
 import 'package:mybookstore/app/modules/main/views/home/components/book_filter_button.dart';
 import 'package:mybookstore/app/repository/book.repository.dart';
 import 'package:mybookstore/app/repository/contracts/ibook.repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class HomeBodyWidget extends StatelessWidget {
-  HomeBodyWidget({Key? key}) : super(key: key);
+class HomeBodyWidget extends StatefulWidget {
+  const HomeBodyWidget({Key? key}) : super(key: key);
+
+  @override
+  State<HomeBodyWidget> createState() => _HomeBodyWidgetState();
+}
+
+class _HomeBodyWidgetState extends State<HomeBodyWidget> {
   final IBookRepository _bookRepository = BookRepository();
 
   Future<List<GetStoreBookResponseDTO>> getStoreBooks() async {
@@ -60,7 +66,7 @@ class HomeBodyWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 12),
                       itemCount: storeBooks.data!.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return GalleryWidget(book: storeBooks.data![index]);
+                        return BookListItem(book: storeBooks.data![index]);
                       },
                     ),
                   ),
