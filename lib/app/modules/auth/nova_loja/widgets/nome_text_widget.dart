@@ -7,7 +7,7 @@ class NomeTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const InputTextWidget(label: "Nome", formControlName: "nome");
+    return const InputTextWidget(label: "Nome do Usuário", formControlName: "username");
 
   }
 }

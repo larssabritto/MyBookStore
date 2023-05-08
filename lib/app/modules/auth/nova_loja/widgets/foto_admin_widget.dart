@@ -6,6 +6,6 @@ class FotoAdministrador extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InputTextWidget(label: "Foto do Administrador", formControlName: "foto");
+    return const InputTextWidget(label: "Foto do Administrador (URL)", formControlName: "foto");
   }
 }

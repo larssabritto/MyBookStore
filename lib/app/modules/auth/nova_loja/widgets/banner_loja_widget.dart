@@ -6,8 +6,8 @@ class BannerLojaWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InputTextWidget(
-        label: "Banner loja",
+    return const InputTextWidget(
+        label: "Banner loja (URL)",
         formControlName: "banner");
   }
 }

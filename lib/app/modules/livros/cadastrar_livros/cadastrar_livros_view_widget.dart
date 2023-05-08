@@ -17,7 +17,7 @@ class CadastrarLivrosViewWidget extends StatelessWidget {
           ),
         ),
       ),
-      body: const CadastrarLivrosBody(),
+      body: CadastrarLivrosBody(),
     );
   }
 }

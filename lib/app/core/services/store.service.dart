@@ -6,7 +6,7 @@ import 'package:mybookstore/app/dtos/store/update_store/update_store.request.dto
 class StoreService {
   final HttpClient _httpClient = HttpClient();
 
-  Future createStore(CreateStoreDTO store) async {
+  Future createStore(CreateStoreRequestDTO store) async {
     return await _httpClient.post(
       '/store',
       store,

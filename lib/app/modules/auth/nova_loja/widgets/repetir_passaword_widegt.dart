@@ -6,6 +6,6 @@ class RepetirPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InputTextWidget(label: "Repetir senha", formControlName: "repetir");
+    return const InputTextWidget(label: "Repetir senha", formControlName: "repetir_senha");
   }
 }

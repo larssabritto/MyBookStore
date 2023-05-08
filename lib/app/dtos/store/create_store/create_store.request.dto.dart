@@ -1,15 +1,15 @@
 import 'package:mybookstore/app/core/contracts/rest_entity.dart';
 import 'package:mybookstore/app/dtos/user_dto.dart';
 
-class CreateStoreDTO implements RestEntity {
+class CreateStoreRequestDTO implements RestEntity {
   String? name;
   String? slogan;
   String? banner;
   UserDTO? admin;
 
-  CreateStoreDTO({this.name, this.slogan, this.banner, this.admin});
+  CreateStoreRequestDTO({this.name, this.slogan, this.banner, this.admin});
 
-  CreateStoreDTO.fromJson(Map<String, dynamic> json) {
+  CreateStoreRequestDTO.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     slogan = json['slogan'];
     banner = json['banner'];

@@ -11,7 +11,7 @@ class HomeModule extends Module {
   @override
   List<ModularRoute> get routes => [
         ChildRoute("/", child: (context, args) => const MainViewWidget()),
-        ChildRoute("/livros/cadastrar", child: (context, args) => const CadastrarLivrosBody()),
+        ChildRoute("/livros/cadastrar", child: (context, args) => CadastrarLivrosBody()),
         ChildRoute("/usuario/cadastrar", child: (context, args) => CadastrarFuncionarioWidget()),
         ChildRoute("/livros/listar", child: (context, args) => ExibirLivros()),
       ];

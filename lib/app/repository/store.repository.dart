@@ -13,7 +13,7 @@ class StoreRepository implements IStoreRepository {
   final StoreService _storeService = StoreService();
 
   @override
-  Future<CreateStoreResponseDTO> createStore(CreateStoreDTO store) async {
+  Future<CreateStoreResponseDTO> createStore(CreateStoreRequestDTO store) async {
     try {
       Response response = await _storeService.createStore(store);
       return CreateStoreResponseDTO.fromJson(response.data);
