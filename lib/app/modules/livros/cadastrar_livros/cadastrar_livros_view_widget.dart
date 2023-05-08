@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mybookstore/app/modules/adm/livros/cadastrar_livros_body_widget.dart';
+import 'package:mybookstore/app/modules/livros/cadastrar_livros/cadastrar_livros_body_widget.dart';
 
 class CadastrarLivrosViewWidget extends StatelessWidget {
   const CadastrarLivrosViewWidget({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mybookstore/app/components/input_text_widget.dart';
 import 'package:mybookstore/app/components/router_button_widget.dart';
 import 'package:mybookstore/app/dtos/store/get_store/get_store_response.dto.dart';
-import 'package:mybookstore/app/modules/main/views/livros/components/banner_widget.dart';
+import 'package:mybookstore/app/modules/main/views/perfil/banner_widget.dart';
 import 'package:mybookstore/app/repository/contracts/istore.repository.dart';
 import 'package:mybookstore/app/repository/store.repository.dart';
 import 'package:reactive_forms/reactive_forms.dart';

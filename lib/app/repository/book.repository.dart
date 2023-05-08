@@ -33,6 +33,8 @@ class BookRepository implements IBookRepository {
 
   @override
   Future<GetStoreBookResponseDTO> getStoreBook(int idStore, int idBook) async {
+    print(idStore);
+    print(idBook);
     try {
       Response response = await _bookService.getStoreBook(idStore, idBook);
       return GetStoreBookResponseDTO.fromJson(response.data);

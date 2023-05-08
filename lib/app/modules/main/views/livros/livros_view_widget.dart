@@ -24,7 +24,7 @@ class LivrosViewWidget extends StatelessWidget {
       body: LivrosBodyWidget(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xff08182A),
-        onPressed: () {Modular.to.pushNamed('/livros/');},
+        onPressed: () {Modular.to.pushNamed('/livros/novo');},
         child: const Icon(Icons.add),
       ),
     );

@@ -18,7 +18,7 @@ class GalleryWidget extends StatelessWidget {
               height: 120,
               child: InkWell(
                 onTap: () {
-                  Modular.to.pushNamed('/home/listar');
+                  Modular.to.pushNamed('/livros/${book.id}');
                 },
                 child: Image.network(
                   book.cover ?? "",
